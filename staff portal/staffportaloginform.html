@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecturers Portal Login</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="Loginform.css" />
+    <link rel="shortcut icon" href="/homepage/image/WhatsApp Image 2025-08-27 at 07.10.28_5a6b93e8.jpg" />
+</head>
+
+<body>
+    <form id="form">
+        <h2>LECTURERS PORTAL</h2>
+
+        <!-- Username Input -->
+        <div class="input_wrapper">
+            <input id="username" type="text" placeholder="Lecturer ID" required />
+            <i class="fa-solid fa-circle-user"></i>
+            <div class="error"></div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="input_wrapper">
+            <input id="password" type="password" placeholder="Password" required />
+            <i class="fa-solid fa-key"></i>
+            <div class="error"></div>
+        </div>
+
+        <!-- Remember & Forgot -->
+        <div class="wrapper">
+            <div id="container">
+                <input type="checkbox" id="checkbox" />
+                <div class="checkmark"></div>
+                <p>Remember me</p>
+            </div>
+            <p><a href="#">Forgot Password?</a></p>
+        </div>
+
+        <!-- Login Button -->
+        <button type="submit">LOGIN</button>
+    </form>
+
+    <!-- Custom Success Alert -->
+    <div id="box">
+        <p>✅ Login Successful</p>
+        <button onclick="closeCustomAlert()">OK</button>
+    </div>
+    <div class="loader"></div>
+    <!-- Link your JavaScript file -->
+    <script src="lecturerloginform.js"></script>
+</body>
+
+</html>
