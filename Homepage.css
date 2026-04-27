@@ -262,7 +262,7 @@ nav .headerulist li a {
   word-wrap: break-word;
   word-break: break-word;
   box-sizing: border-box;
-  background-image: url(/img4.avif);
+  background-image: url("img4.avif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
