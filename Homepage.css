@@ -163,7 +163,7 @@ nav .headerulist li a {
   margin: auto;
   min-height: 100vh;
   overflow: hidden;
-  background: url(./image/mixkit-students-walking-in-a-university-4519-full-hd.mp4);
+  background: url("mixkit-students-walking-in-a-university-4519-full-hd.mp4");
 }
 
 .background_video {
