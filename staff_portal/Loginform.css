@@ -1,0 +1,256 @@
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #3a7bd5, #00d2ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./image/photo-1732579690000-84101b120f7f.avif);
+}
+
+form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  -webkit-animation: scale-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Input Wrapper */
+.input_wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input_wrapper input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+.input_wrapper input:focus {
+  border-color: #3a7bd5;
+  outline: none;
+}
+/* Icons */
+.input_wrapper i {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.input_wrapper:focus-within i {
+  color: #3a7bd5;
+}
+
+/* Error message styling */
+.error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Checkbox and links container */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+}
+
+#checkbox {
+  margin-right: 0px;
+}
+
+.wrapper a {
+  text-decoration: none;
+  color: #3a7bd5;
+  transition: color 0.3s;
+}
+
+.wrapper a:hover {
+  color: #005f99;
+}
+
+/* Login Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #3a7bd5;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2e5cad;
+}
+button  {
+  color: white;
+}
+/* Responsive */
+@media (max-width: 480px) {
+  form {
+    padding: 30px 20px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wrapper p {
+    margin-top: 10px;
+  }
+}
+
+/* box popup styling */
+
+.input-control.success input {
+  border-color: #2ecc71;
+  /* green */
+}
+
+.input-control.error input {
+  border-color: #e74c3c;
+  /* red */
+}
+
+.input-control .error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#box {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+#box p {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+#box button {
+  background: #006fca;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top-color: #006fca;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loader-hidden {
+  display: none;
+}
+ 
