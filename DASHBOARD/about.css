@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+
+.top-nav {
+  background-color: #002147;
+  padding: 10px 0;
+}
+.top-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.top-nav li {
+  margin: 0 15px;
+}
+.top-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f5f5f5;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #002147;
+}
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+.main-nav li {
+  margin-left: 20px;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #002147;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+.main-nav a.active {
+  color: #d60000;
+  border-bottom: 2px solid #d60000;
+}
+
+
+.Text-Overlay {
+  background-image: url('../IMAGE/Library\ Image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+.overlay h1 {
+  color: #ffffff;
+  font-size: 48px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  padding: 60px 0 60px 60px;
+  max-width: none;
+  margin: 0;
+}
+
+.left-section {
+  max-width: 600px;
+  margin-right: 40px;
+}
+
+.headline {
+  font-size: 72px;
+  color: #0033a0;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.right-section {
+  display: flex;
+  align-items: flex-start;
+}
+.red-line {
+  border: none;
+  height: 4px;
+  background-color: #d00000; 
+  margin: 20px 0 0 60px; 
+  width: calc(100% - 60px);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.aru-colleges {
+  padding: 60px;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #0033a0;
+  margin-bottom: 40px;
+}
+
+.college-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.college-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.college-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #0033a0;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.learn-more {
+  text-decoration: none;
+  color: #d00000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: #a00000;
+}
+.college-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}

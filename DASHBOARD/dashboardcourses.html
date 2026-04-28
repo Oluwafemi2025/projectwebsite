@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="dashboardcourses.css">
+    <link rel="shortcut icon" href="/homepage/image/WhatsApp Image 2025-08-27 at 07.10.28_5a6b93e8.jpg">
+
+</head>
+<body>
+    <div class="content">
+        <div class="welcome_bck">
+            <h3>Course Page: <span>Web Development</span></h3>
+            <p>Explore schedules, resources, discussions, and FAQs.</p>
+        </div>
+
+        <!-- Course Overview -->
+        <section class="box">
+            <h2><i class="fa-solid fa-book" style="color: 2563eb;"></i> Course Overview</h2>
+            <p>This course introduces HTML, CSS, and JavaScript. By the end, you’ll build responsive, interactive
+                websites and understand web fundamentals.</p>
+        </section>
+
+        <!-- Class Schedule -->
+        <section class="box">
+            <h2><i class="fa-solid fa-calendar-days" style="color: #22c55e;"></i> Class Schedule</h2>
+            <ul id="schedule-list">
+                <li><span>Week 1: HTML Basics</span> <button class="complete">✔</button> <button
+                        class="remove">✖</button></li>
+                <li><span>Week 2: CSS Styling</span> <button class="complete">✔</button> <button
+                        class="remove">✖</button></li>
+            </ul>
+            <div class="form-inline">
+                <input type="text" id="new-schedule" placeholder="Add new schedule item">
+                <button onclick="addSchedule()">Add</button>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="box">
+            <h2><i class="fa-solid fa-folder-open" style="color: #f97316;"></i> Resources</h2>
+            <ul id="resource-list">
+                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools Tutorials</a></li>
+            </ul>
+            <div class="form-inline">
+                <input type="text" id="resource-title" placeholder="Resource title">
+                <input type="url" id="resource-link" placeholder="https://example.com">
+                <button onclick="addResource()">Add</button>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="box">
+            <h2><i class="fa-solid fa-question" style="color: red;"></i> FAQ</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <button class="faq-question">What is the duration of the course? <span>+</span></button>
+                    <div class="faq-answer">The course runs for 8 weeks.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do I need prior coding knowledge? <span>+</span></button>
+                    <div class="faq-answer">No, this course is beginner-friendly.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discussion Forum -->
+        <section class="box">
+            <h2><i class="fa-solid fa-comments" style="color: #a855f7;"></i> Discussion Forum</h2>
+            <div id="forum">
+                <div id="forum-messages"></div>
+                <div class="form-inline">
+                    <input type="text" id="forum-input" placeholder="Write a message">
+                    <button onclick="postMessage()">Post</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="attendance.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <link rel="shortcut icon" href="/homepage/image/WhatsApp Image 2025-08-27 at 07.10.28_5a6b93e8.jpg">
+    <title>Attendance</title>
+</head>
+
+<body>
+    <div class="page" id="dlpage">
+        <div class="header_area">
+            <div class="logo_area">
+                <h1 class="logo">ATTENDANCE</h1>
+            </div>
+            <div class="btn_area"><button class="atdbtn">logout</button></div>
+        </div>
+
+        <div class="session_area">
+            <div class="label_area">
+                <label>SESSION</label>
+            </div>
+            <div class="dropdown_area">
+                <select class="ddlclass" id="ddlclass">
+                    <option value="">SELECT ONE</option>
+                    <option value="Rain Semester">Rain Semester</option>
+                    <option value="Harmattan Semester">Harmattan Semester</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="classlist_area">
+            <div class="classcard" id="classcard1">ADSE</div>
+            <div class="classcard" id="classcard2">WEBDEV</div>
+            <div class="classcard" id="classcard3">CPICM</div>
+            <div class="classcard" id="classcard4">N+</div>
+            <div class="classcard" id="classcard5">S+</div>
+        </div>
+
+        <div class="classdetails_area" id="classdetails_area">
+            <div class="classdetails">
+                <div class="title_area">INTRODUCTION TO CSS</div>
+                <div class="code_area">CSS101</div>
+                <div class="ondate_area">
+                    <input id="date" type="date" i>
+                </div>
+            </div>
+        </div>
+
+        <div class="studentnames_area" id="studentnames_area">
+            <div class="studentlist"><label>STUDENTLIST</label></div>
+            <div class="studentdetails">
+                <div class="sl_no_area">001</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Karim Patricia</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">002</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Nguyen Jason</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">003</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Van der Merwe Nadia</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">004</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Adesewa Aderibigbe</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">005</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Yusuf Alice</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">006</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">John Chukuemeka</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">007</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Kingsley Edwards</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">008</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Celine Ndiaye</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">009</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Bello Ahmadu</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">010</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Matheas Gilmore</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">011</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Busari Antonio</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">012</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Abubakar Afred</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">013</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Mary Oyakilome</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">014</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">John Randle</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">015</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">John Randle</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">016</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">John Randle</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">017</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Samuel Tekle</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+            <div class="studentdetails">
+                <div class="sl_no_area">018</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">John Randle</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+             <div class="studentdetails">
+                <div class="sl_no_area">019</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Thandiwe Ndlovu</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div> 
+            <div class="studentdetails">
+                <div class="sl_no_area">020</div>
+                <div class="row_no_area">CSS101</div>
+                <div class="name_area">Kwame Mensah</div>
+                <div class="checkbox_area"><input type="checkbox"></div>
+            </div>
+        </div>
+        <div class="report_area">
+            <button id="rptBtn"> Download Report</button>
+        </div>
+    </div>
+
+
+    <script src="attendance.js">
+
+    </script>
+</body>
+
+</html>

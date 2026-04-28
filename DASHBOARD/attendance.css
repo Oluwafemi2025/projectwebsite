@@ -1,0 +1,343 @@
+:root {
+  /* Backgrounds */
+  --body-bg: #f8fafc;
+  --menu-bg: #ffffff;
+  --box-bg: #ffffff;
+  --welcome-bg: #ffffff;
+  --search-bg: #f1f5f9;
+  --card-bg: #ffffff;
+
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-light: #64748b;
+  --text-placeholder: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Borders */
+  --border-color: #e2e8f0;
+
+  /* Accents */
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-light: #dbeafe;
+  --danger: #ef4444;
+  --success: #10b981;
+
+  /* Effects */
+  --shadow-light: 0 1px 3px rgba(15, 23, 42, 0.04);
+  --shadow-medium: 0 4px 6px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 6px 12px rgba(15, 23, 42, 0.12);
+
+  /* Defaults */
+  --gap: 0.5rem;
+  --font-size: 1rem;
+  --padding: 0.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--body-bg);
+  color: var(--text-primary);
+}
+
+/* PAGE */
+.page {
+  border: 1px solid var(--border-color);
+  width: min(1200px, 95%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header_area"
+    "session_area"
+    "classlist_area"
+    "classdetials_area"
+    "studentnames_area";
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-light);
+  background: var(--box-bg);
+  transition: box-shadow 0.3s ease;
+}
+.page:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* HEADER */
+.header_area {
+  grid-area: header_area;
+  background-color: var(--accent);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "logo_area btn_area";
+  gap: var(--gap);
+  padding: var(--padding);
+  color: white;
+}
+
+.logo_area {
+  grid-area: logo_area;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btn_area {
+  grid-area: btn_area;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.btn_area button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn_area button:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+/* SESSION */
+.session_area {
+  grid-area: session_area;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-areas:
+    "label_area"
+    "dropdown_area";
+  gap: var(--gap);
+  padding: var(--padding);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--card-bg);
+}
+
+.label_area {
+  grid-area: label_area;
+  font-size: calc(var(--font-size) * 0.9);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.dropdown_area {
+  grid-area: dropdown_area;
+    cursor: pointer;
+
+}
+
+.ddlclass {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: solid 2px var(--accent);
+  font-size: var(--font-size);
+  padding: 0.4rem;
+  transition: border-color 0.3s ease;
+    cursor: pointer;
+
+}
+.ddlclass:focus {
+  border-color: var(--accent-hover);
+}
+
+/* CLASS LIST */
+.classlist_area {
+  grid-area: classlist_area;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  padding: var(--padding);
+  align-items: center;
+  justify-content: center;
+}
+.classcard {
+  font-size: calc(var(--font-size) * 1);
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 0.4em;
+  background-color: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: break-word;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.classcard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.classcard:active{
+    background-color: var(--success);
+
+}
+/* CLASS DETAILS */
+.classdetails_area {
+  grid-area: classdetials_area;
+  gap: var(--gap);
+  padding: var(--padding);
+}
+.classdetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "title_area title_area"
+    "code_area ondate_area";
+  gap: var(--gap);
+  font-size: var(--font-size);
+}
+.title_area {
+  grid-area: title_area;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.code_area {
+  grid-area: code_area;
+  color: var(--text-light);
+}
+.ondate_area {
+  grid-area: ondate_area;
+  display: flex;
+  justify-content: end;
+}
+.ondate_area > input {
+  font-size: var(--font-size);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  outline: none;
+}
+
+/* STUDENTS */
+.studentnames_area {
+  grid-area: studentnames_area;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--padding);
+}
+.studentdetails {
+  display: grid;
+  grid-template-columns: 0.25fr 1.5fr 0.4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "sl_no_area row_no_area checkbox_area"
+    "name_area name_area checkbox_area";
+  width: 100%;
+  font-size: var(--font-size);
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.3s ease;
+    cursor: pointer;
+
+}
+.studentdetails:hover {
+  background: var(--search-bg);
+}
+
+/* ENHANCED CHECKBOX */
+.checkbox_area input {
+  width: 1.2em;
+  height: 1.2em;
+  cursor: pointer;
+  accent-color: var(--accent);
+  border-radius: 0.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.checkbox_area input:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+.checkbox_area input:checked {
+  box-shadow: 0 0 0 3px var(--accent-light);
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (min-width: 767px) {
+  .session_area {
+    grid-template-columns: 0.5fr 0.5fr 1fr 0.5fr;
+    grid-template-rows: auto;
+    grid-template-areas: "label_area dropdown_area";
+  }
+  .studentdetails {
+    grid-template-columns: 1fr 2fr 3fr 1fr;
+    grid-template-areas: "sl_no_area row_no_area name_area checkbox_area";
+  }
+}
+ .classlist_area{
+  cursor: pointer;
+ }
+.report_area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size);
+  padding: 0.8rem;
+}
+#rptBtn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+/* hover styling */
+#rptBtn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+/* Active (when clicked) */
+#rptBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Optional: focus for accessibility */
+#rptBtn:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.studentdetails:has(.checkbox_area > input:checked) {
+  background-color: var(--success);
+  color: #fff; /* Optional: change text color for contrast */
+  transition: background-color 0.3s ease;
+}
+
+/* view when cicked */
+
+/* .classlist_area,.classdetails_area,.studentnames_area{
+  display: none;
+} */
