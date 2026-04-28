@@ -77,7 +77,7 @@ form.addEventListener("submit", (e) => {
       // Show loader and redirect after 2s
       loader.style.display = "flex";
       setTimeout(() => {
-        window.location.href = "DASHBOARD/lecturersdashboard.html";
+      window.location.href = "DASHBOARD/lecturersdashboard.html";
       }, 2000);
     } else {
       setError(username, "Invalid username or password");
