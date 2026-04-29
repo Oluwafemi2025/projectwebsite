@@ -77,8 +77,10 @@ form.addEventListener("submit", (e) => {
       // Show loader and redirect after 2s
       loader.style.display = "flex";
       setTimeout(() => {
-window.location.href = "../DASHBOARD/lecturersdashboard.html";
+        // ✅ FIXED LINE 80
+        window.location.href = "../DASHBOARD/lecturersdashboard.html";
       }, 2000);
+
     } else {
       setError(username, "Invalid username or password");
       setError(password, "");
@@ -149,6 +151,7 @@ window.addEventListener("DOMContentLoaded", () => {
       password: savedPassword,
       rememberMe,
     } = JSON.parse(savedLoginData);
+
     username.value = savedUsername || "";
     password.value = savedPassword || "";
     checkbox.checked = rememberMe;
