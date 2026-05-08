@@ -70,5 +70,5 @@ document.getElementById("logoutBtn").addEventListener("click", function (e) {
   // clear session/localStorage if used
   localStorage.clear();
   sessionStorage.clear();
-  window.location.href = "/staff portal/staffportaloginform.html"; // redirect only
+  // window.location.href = "/staff portal/staffportaloginform.html"; // redirect only
 });
