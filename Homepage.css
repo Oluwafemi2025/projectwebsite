@@ -47,7 +47,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 5rem;
+  height: 5rem;
   background-color: var(--header-bg); /*Customize your variable or use #fff */
   display: flex;
   justify-content: space-between;
@@ -1005,7 +1005,5 @@ footer {
   .dropdown.active .portal_dropdown {
     display: block;
   }
-   h4 {
-    display: none;
-  }
+  
 }
