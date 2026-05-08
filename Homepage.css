@@ -1005,5 +1005,7 @@ footer {
   .dropdown.active .portal_dropdown {
     display: block;
   }
-  
+  h4{
+    display:none
+  }
 }
