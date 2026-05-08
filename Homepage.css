@@ -44,7 +44,7 @@ body {
 
 header {
   position: fixed;
-  top: rem;
+  top: 0;
   left: 0;
   width: 100%;
   height: 5rem;
@@ -52,7 +52,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 4rem;
+  padding: 0 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 999;
   font-family: "Poppins", sans-serif;
@@ -956,6 +956,9 @@ footer {
 
 /* Mobile Menu Layout */
 @media (max-width: 768px) {
+  h4 {
+    display: none;
+  }
   .hamburger {
     display: flex;
   }
