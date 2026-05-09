@@ -973,7 +973,9 @@ footer {
     transition: left 0.3s ease;
     padding-top: 2rem;
   }
-
+ h4{
+  display:none;
+}
   .headerulist.active {
     left: 0;
   }
@@ -1005,7 +1007,5 @@ footer {
   .dropdown.active .portal_dropdown {
     display: block;
   }
-  h4{
-    display:none;
-  }
+
 }
