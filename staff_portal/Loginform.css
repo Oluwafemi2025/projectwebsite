@@ -159,12 +159,17 @@ button  {
   }
 
   .wrapper {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
-  .wrapper p {
-    margin-top: 10px;
+  .wrapper p:last-child {
+    margin-left: auto;
   }
 }
 
