@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Settings</title>
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/student portal/web_group_project - Copy (3)/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header-top">
+        <nav>
+          <!-- Logo -->
+          <div class="navbar-left">
+            <a href="#" class="navbar-header">
+              <img
+                src="/student portal/web_group_project - Copy (3)/images/adf93be8-469a-45dd-99fc-9ed06804515d.jpeg"
+                alt="logo"
+              />
+              <h4>
+                African Renaissance <br />
+                University
+              </h4>
+            </a>
+
+            <!-- Icons -->
+            <ul class="navbar-left-icons">
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-bars-progress"></i
+                  ><span class="bg-green">0</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-envelope"></i
+                  ><span class="bg-red">2</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-bell"></i
+                  ><span class="bg-yellow">7</span></a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Profile Dropdown -->
+          <ul class="navbar-right">
+            <li class="dropdown">
+              <a href="#">
+                <img
+                  style="border-radius: 50%"
+                  width="40px"
+                  height="40px"
+                  src="/student portal/web_group_project - Copy (3)/images/1684492386IMG_20230519_112837_(225_x_300_pixel).jpg"
+                  alt="profile"
+                />
+                <span class="welcome-message">Welcome, Godwin</span>
+                <i class="fa-solid fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Temporary ID Card</a></li>
+                <li><a href="#">Change Password</a></li>
+                <li><a href="#">Update Passport</a></li>
+                <li><a href="#">Notification</a></li>
+                <li><a href="#">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Toggle -->
+        </nav>
+      </header>
+
+      <!-- Navigation Icons -->
+      <section id="header">
+        <div class="overlay">
+          <nav class="nav-icons">
+            <ul>
+              <li>
+                <a href="/student portal/web_group_project - Copy (3)/student-dashboard.html"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+              </li>
+              <li>
+                <a href="/student portal/web_group_project - Copy (3)/student-payment.html"><i class="fa-solid fa-credit-card"></i>Payments</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-book"></i>Courses</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bed"></i>Hostel</a>
+              </li>
+              <li>
+                <a href="/student portal/web_group_project - Copy (3)/student-results.html"><i class="fa-solid fa-list"></i>Results</a>
+              </li>
+              <li>
+                <a href="/student portal/web_group_project - Copy (3)/student-account.html"
+                  ><i class="fa-solid fa-sliders"></i>Account Settings</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <div class="portals-dropdown">
+            <button id="dropdownToggle" class="dropdown-toggle">
+              <i class="fa-solid fa-bars"></i>Menu
+            </button>
+            <ul id="dropdownMenu" class="dropdownMenu">
+              <li>
+                <a href="/student portal/web_group_project - Copy (3)/student-dashboard.html"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+              </li>
+              <li>
+                <a href="/student portal/web_group_project - Copy (3)/student-payment.html"><i class="fa-solid fa-credit-card"></i>Payments</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-book"></i>Courses</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bed"></i>Hostel</a>
+              </li>
+              <li>
+                <a href="/student portal/web_group_project - Copy (3)/student-results.html"><i class="fa-solid fa-list"></i>Results</a>
+              </li>
+              <li>
+                <a href="/student portal/web_group_project - Copy (3)/student-account.html"
+                  ><i class="fa-solid fa-sliders"></i>Account Settings</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <main>
+        <section class="account-intro">
+          <h2>Account Settings</h2>
+          <p>
+            Manage your account information, update your profile, and view your academic details.
+          </p>
+        </section>
+
+        <div class="account-container">
+          <!-- Personal Information -->
+          <div class="account-section">
+            <h3><i class="fa-solid fa-user"></i> Personal Information</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <label>Full Name:</label>
+                <span>Godwin Goje</span>
+              </div>
+              <div class="info-item">
+                <label>Matriculation Number:</label>
+                <span>22/ENG02/0321</span>
+              </div>
+              <div class="info-item">
+                <label>Email:</label>
+                <span>godwin.goje@aru.edu.ng</span>
+              </div>
+              <div class="info-item">
+                <label>Phone:</label>
+                <span>+234 904 758 7753</span>
+              </div>
+              <div class="info-item">
+                <label>Date of Birth:</label>
+                <span>10th January, 2007</span>
+              </div>
+              <div class="info-item">
+                <label>Gender:</label>
+                <span>Male</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Information -->
+          <div class="account-section">
+            <h3><i class="fa-solid fa-graduation-cap"></i> Academic Information</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <label>Department:</label>
+                <span>Computer Science</span>
+              </div>
+              <div class="info-item">
+                <label>Faculty:</label>
+                <span>Science and Technology</span>
+              </div>
+              <div class="info-item">
+                <label>Current Level:</label>
+                <span>300 Level</span>
+              </div>
+              <div class="info-item">
+                <label>Admission Year:</label>
+                <span>2020</span>
+              </div>
+              <div class="info-item">
+                <label>Expected Graduation:</label>
+                <span>2024</span>
+              </div>
+              <div class="info-item">
+                <label>CGPA:</label>
+                <span id="account-cgpa">4.45</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Information -->
+          <div class="account-section">
+            <h3><i class="fa-solid fa-credit-card"></i> Payment Information</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <label>Total School Fees:</label>
+                <span>₦2,565,000</span>
+              </div>
+              <div class="info-item">
+                <label>Amount Paid:</label>
+                <span id="account-paid">₦0</span>
+              </div>
+              <div class="info-item">
+                <label>Outstanding Balance:</label>
+                <span id="account-outstanding">₦2,565,000</span>
+              </div>
+              <div class="info-item">
+                <label>Payment Status:</label>
+                <span id="account-status">Unpaid</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account Actions -->
+          <div class="account-section">
+            <h3><i class="fa-solid fa-cogs"></i> Account Actions</h3>
+            <div class="action-buttons">
+              <button class="btn" onclick="changePassword()">
+                <i class="fa-solid fa-key"></i> Change Password
+              </button>
+              <button class="btn" onclick="updateProfile()">
+                <i class="fa-solid fa-edit"></i> Update Profile
+              </button>
+              <button class="btn" onclick="downloadTranscript()">
+                <i class="fa-solid fa-download"></i> Download Transcript
+              </button>
+              <button class="btn red" onclick="logout()">
+                <i class="fa-solid fa-sign-out-alt"></i> Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- JS -->
+    <script src="/student portal/web_group_project - Copy (3)/js/student-account.js" defer></script>
+  </body>
+</html>

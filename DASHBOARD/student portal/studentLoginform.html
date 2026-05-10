@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="studentLoginform.css" />
+  <link rel="shortcut icon" href="/homepage/image/WhatsApp Image 2025-08-27 at 07.10.28_5a6b93e8.jpg">
+
+  <script src="studentportal.js" defer></script>
+</head>
+
+<body>
+  <div class="form-container">
+    <div class="form-wrapper">
+      <div class="logo-container">
+        <div class="logo"></div>
+      </div>
+      <form id="form" method="get">
+        <h1>LOG IN</h1>
+        <div class="input-control">
+          <label for="matric-no">Matriculation Number</label>
+          <input type="text" id="matric-no" name="matric-no" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="password">Password</label>
+          <input type="password" id="pword" name="pword" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="Cpword">Confirm Password</label>
+          <input type="password" id="Cpword" name="Cpword" />
+          <div class="error"></div>
+        </div>
+
+        <button type="submit" name="submit">Log in</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
