@@ -157,33 +157,41 @@ nav .headerulist li a {
 /* Headerstyling ends. */
 
 .section1 {
-  position: relative;
-  background-color: var(--color-bg);
+   position: relative;
   width: 100%;
-  margin: auto;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
-  background: url("mixkit-students-walking-in-a-university-4519-full-hd.mp4");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: url(./image/mixkit-students-walking-in-a-university-4519-full-hd.mp4); */
 }
 
-.background_video {
-  position: absolute;
+.background_video{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* puts it behind content */
+  z-index: -2; /* puts it behind content */
+}
+   /* DARK OVERLAY */
+.video_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
 }
 .section1_text {
-  position: relative;
-  z-index: 1;
+  /* position: relative; */
+  /* z-index: 1; */
   color: var(--color-bg);
   text-align: center;
   /* top: 50%;
   transform: translateY(-50%); */
-  padding: 100px 20px;
+  padding: 1rem;
+  max-width: 900px;
 }
 .section1 h1,
 .section1 p {
@@ -191,16 +199,20 @@ nav .headerulist li a {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .section1 h1 {
-  font-size: 70px;
-  text-align: center;
-  font-weight: 800;
-  padding-top: 70px;
-  /* font-family: ; */
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  /* text-align: center; */
+  /* font-weight: 800; */
+  /* padding-top: 70px; */
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  font-family: "Cormorant Garamond", serif;
 }
 .section1 p {
-  font-size: 20px;
-  text-align: center;
-  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;  
+  /* text-align: center;
+  font-weight: 700; */
 }
 
 .dt {
@@ -209,6 +221,49 @@ nav .headerulist li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.dt {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+
+  width: 100%;
+  padding: 0 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+  z-index: 2;
+}
+
+.dt p {
+  font-size: 0.95rem;
+  font-family: "Montserrat", sans-serif;
+}
+  /* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+
+  .section1 {
+    height: 90vh;
+  }
+
+  .section1_text h1 {
+    font-size: 2.3rem;
+  }
+
+  .section1_text p {
+    font-size: 1rem;
+  }
+
+  .dt {
+    flex-direction: column;
+    gap: 0.5rem;
+    bottom: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
 }
 
 /* section1 styling ends */
