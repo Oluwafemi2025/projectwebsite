@@ -140,15 +140,12 @@
 /* Keyframes: smooth vertical reveal */
 @-webkit-keyframes scale-in-ver-bottom {
   0% {
-    transform: translateY(20px) scaleY(0.9);
-    -webkit-transform-origin: bottom;
+    transform: translateY(20px) scale(0.95);
     transform-origin: bottom;
     opacity: 0;
   }
-
   100% {
-    transform: translateY(0) scaleY(1);
-    -webkit-transform-origin: bottom;
+    transform: translateY(0) scale(1);
     transform-origin: bottom;
     opacity: 1;
   }
@@ -156,15 +153,12 @@
 
 @keyframes scale-in-ver-bottom {
   0% {
-    transform: translateY(20px) scaleY(0.9);
-    -webkit-transform-origin: bottom;
+    transform: translateY(20px) scale(0.95);
     transform-origin: bottom;
     opacity: 0;
   }
-
   100% {
-    transform: translateY(0) scaleY(1);
-    -webkit-transform-origin: bottom;
+    transform: translateY(0) scale(1);
     transform-origin: bottom;
     opacity: 1;
   }
