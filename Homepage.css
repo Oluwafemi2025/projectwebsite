@@ -651,6 +651,7 @@ main {
   background-color: var(--header-bg);
   width: 100%;
   flex-wrap: wrap; /* enables stacking on small screens */
+  border-radius: 0.2rem;
 }
 
 .mission,
@@ -660,6 +661,7 @@ main {
   background-color: var(--primarybutton1);
   color: var(--text-bg);
   padding: 4rem;
+  border-radius: 0.2rem;
   box-sizing: border-box;
   font-family: "Inter";
 }
@@ -717,7 +719,6 @@ main {
   .section-two {
     flex-direction: column;
     padding: 1.5rem 1rem;
-    border-radius: 0.2rem;
 
   }
 
@@ -725,7 +726,6 @@ main {
   .vision {
     width: 100%;
     padding: 1.5rem;
-    border-radius: 0.2rem;
 
   }
 
