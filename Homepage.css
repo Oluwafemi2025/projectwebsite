@@ -717,12 +717,16 @@ main {
   .section-two {
     flex-direction: column;
     padding: 1.5rem 1rem;
+    border-radius: 0.2rem;
+
   }
 
   .mission,
   .vision {
     width: 100%;
     padding: 1.5rem;
+    border-radius: 0.2rem;
+
   }
 
   .section-two h2 {
