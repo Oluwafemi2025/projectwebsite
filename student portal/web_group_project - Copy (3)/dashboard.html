@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header-top">
+        <nav>
+          <!-- Logo -->
+          <div class="navbar-left">
+            <a href="#" class="navbar-header">
+              <img
+                src="images/adf93be8-469a-45dd-99fc-9ed06804515d.jpeg"
+                alt="logo"
+              />
+              <h4>
+                African Renaissance <br />
+                University
+              </h4>
+            </a>
+
+            <!-- Icons -->
+            <ul class="navbar-left-icons">
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-bars-progress"></i
+                  ><span class="bg-green">0</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-envelope"></i
+                  ><span class="bg-red">2</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-bell"></i
+                  ><span class="bg-yellow">7</span></a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Profile Dropdown -->
+          <ul class="navbar-right">
+            <li class="dropdown">
+              <a href="#">
+                <img
+                  style="border-radius: 50%"
+                  width="40px"
+                  height="40px"
+                  src="images/1684492386IMG_20230519_112837_(225_x_300_pixel).jpg"
+                  alt="profile"
+                />
+                <span class="welcome-message">Welcome, Godwin</span>
+                <i class="fa-solid fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Temporary ID Card</a></li>
+                <li><a href="#">Change Password</a></li>
+                <li><a href="#">Update Passport</a></li>
+                <li><a href="#">Notification</a></li>
+                <li><a href="#">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Toggle -->
+        </nav>
+      </header>
+
+      <!-- Navigation Icons -->
+      <section id="header">
+        <div class="overlay">
+          <nav class="nav-icons">
+            <ul>
+              <li>
+                <a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-credit-card"></i>Payments</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-book"></i>Courses</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bed"></i>Hostel</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-list"></i>Results</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-sliders"></i>Account Settings</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <div class="portals-dropdown">
+            <button id="dropdownToggle" class="dropdown-toggle">
+              <i class="fa-solid fa-bars"></i>Menu
+            </button>
+            <ul id="dropdownMenu" class="dropdownMenu">
+              <li>
+                <a href=""><i class="fa-solid fa-gauge"></i>Dashboard</a>
+              </li>
+              <li>
+                <a href=""><i class="fa-solid fa-credit-card"></i>Payments</a>
+              </li>
+              <li>
+                <a href=""><i class="fa-solid fa-book"></i>Courses</a>
+              </li>
+              <li>
+                <a href=""><i class="fa-solid fa-bed"></i>Hostel</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-list"></i>Results</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-sliders"></i>Account Settings</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <main>
+  <section>
+    <!-- Left Profile Section -->
+    <div class="dashboard-left">
+      <div class="dashboard-left-wrapper">
+        <div class="student-profile">
+          <div class="heading">
+            <strong>my ARU</strong>
+            INFO
+          </div>
+          <div class="profile-picture">
+            <img
+                  src="images/1684492386IMG_20230519_112837_(225_x_300_pixel).jpg"
+                  alt="profile"
+            />
+          </div>
+          <h2 id="matric-number"></h2>
+          <h3 id="course"></h3>
+          <p id="room"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Dashboard Cards -->
+    <div class="dashboard-right">
+      <div class="card school-fees">
+        <div class="icon green"><i class="fas fa-university"></i></div>
+        <h2>Total School Fees</h2>
+        <h3 id="total-school-fees"></h3>
+      </div>
+      <div class="card fees-paid">
+        <div class="icon yellow"><i class="fas fa-money-bill-wave"></i></div>
+        <h2>Fees Paid</h2>
+        <h3 id="fees-paid"></h3>
+      </div>
+      <div class="card gpa">
+        <div class="icon red"><i class="fas fa-book"></i></div>
+        <h2>Current GPA</h2>
+        <h3 id="current-gpa"></h3>
+      </div>
+      <div class="card cgpa">
+        <div class="icon purple"><i class="fas fa-chart-line"></i></div>
+        <h2>CGPA</h2>
+        <h3 id="cgpa"></h3>
+      </div>
+      <div class="card level">
+        <div class="icon blue"><i class="fas fa-level-up-alt"></i></div>
+        <h2>Level</h2>
+        <h3 id="level"></h3>
+      </div>
+      <div class="card hostel">
+        <div class="icon orange"><i class="fas fa-bed"></i></div>
+        <h2>Hostel</h2>
+        <h3 id="hostel"></h3>
+      </div>
+      <div class="card outstanding">
+        <div class="icon red"><i class="fas fa-exclamation-triangle"></i></div>
+        <h2>Outstanding Courses</h2>
+        <h3 id="outstanding-courses">0</h3>
+      </div>
+    </div>
+  </section>
+</main>
+
+    </div>
+  </body>
+</html>
