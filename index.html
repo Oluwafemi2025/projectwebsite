@@ -51,22 +51,33 @@
 
 
         <section class="section1">
-           <video class="video-player__viewer" data-video-player--video-player-target="video" data-action="click-&gt;video-player--video-player#togglePlay dblclick-&gt;video-player--video-player#fullScreen timeupdate-&gt;video-player--video-player#progressUpdate loadedmetadata-&gt;video-player--video-player#setVideoDuration" poster="https://assets.mixkit.co/videos/4519/4519-thumb-720-0.jpg" src="https://assets.mixkit.co/videos/4519/4519-720.mp4" controlslist="nodownload" disablepictureinpicture="" autoplay="" playsinline="" loop="" muted="">
-  </video>
+
+            <!-- Background Video -->
+            <video class="background_video" autoplay muted loop playsinline
+                poster="https://assets.mixkit.co/videos/4519/4519-thumb-720-0.jpg">
+                <source src="https://assets.mixkit.co/videos/4519/4519-720.mp4" type="video/mp4">
+            </video>
+
+            <!-- Dark Overlay -->
+            <div class="video_overlay"></div>
+
+            <!-- Hero Text -->
             <div class="section1_text">
                 <h1>Shaping Leaders For Africa's Future</h1>
-                <p>Rooted in Knowledge, Driven by Excellence </p>
-
+                <p>Rooted in Knowledge, Driven by Excellence</p>
             </div>
+
+            <!-- Bottom Details -->
             <div class="dt">
                 <div>
                     <p>Located in Lagos, Nigeria</p>
                 </div>
 
                 <div>
-                    <p id="Currenttime"> </p>
+                    <p id="Currenttime"></p>
                 </div>
             </div>
+
         </section>
         <section class="section2">
             <div class="section2_wrapper">
