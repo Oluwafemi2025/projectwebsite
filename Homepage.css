@@ -69,7 +69,7 @@ header {
   text-decoration: none;
 }
 .logo i {
-  color: var(--primarycolor2);
+  color: var(--icon-color);
   font-size: 2.5rem;
 }
 .logo h4 a {
