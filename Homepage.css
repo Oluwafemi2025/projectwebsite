@@ -548,7 +548,7 @@ nav .headerulist li a {
 /* .vision h2{
   color: var(--primarycolor1);
 } */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .section-two {
     flex-direction: column;
     gap: auto;
@@ -558,7 +558,7 @@ nav .headerulist li a {
   .section-two p {
     text-align: center;
   }
-}
+} */
 /* /* section3 styling */
 .section3 {
   background-color: var(--color-bg);
