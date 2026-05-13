@@ -69,8 +69,8 @@ header {
   text-decoration: none;
 }
 .logo i {
-  color: var(--icon-color);
-  font-size: 2.5rem;
+  color: var(--color-bg);
+  font-size: 2.1rem;
 }
 .logo h4 a {
   text-decoration: none;
