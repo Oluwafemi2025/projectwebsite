@@ -295,6 +295,8 @@ nav .headerulist li a {
   margin: 0;
   width: 50%;
   box-sizing: border-box;
+  border-radius: 0.2rem;
+
 }
 
 .section2_wrapper_img img {
@@ -437,26 +439,109 @@ nav .headerulist li a {
 @media (max-width: 992px) {
   .section2_wrapper {
     flex-direction: column;
+    display: flex;
+    gap: 2rem;
   }
 
   .section2_wrapper_img,
   .section2_wrapper_text {
-    flex: 1 1 100%;
+    width:100%;
     max-width: 100%;
   }
 
   .section2_wrapper_img {
-    height: 600px;
-    width: auto;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 12px;
   }
 
   .section2_wrapper_img img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .section2_wrapper_text {
-    padding: 2.5rem 1.5rem;
+ padding: 2rem;
+ text-align: center; 
+  }
+  .section2_wrapper_text h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section2_wrapper_text p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .section2_wrapper_btn {
+    padding: 0.9rem 2rem;
+    border-radius: 6px;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+
+  .section2 {
+    padding: 3rem 1rem;
+  }
+
+  .section2_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .section2_wrapper_img {
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .section2_wrapper_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .section2_wrapper_text {
+    padding: 1rem 0.5rem;
+    /* text-align: center; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .section2_wrapper_text h3 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-bottom: 1rem;
+    text-align:center;
+  }
+
+  .section2_wrapper_text p {
+    font-size: 0.95rem;
+    /* line-height: 1.7rem;
+    color: #444;
+    margin-bottom: 1.8rem; */
+  }
+
+  .section2_wrapper_btn {
+    width: 50%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .section2_wrapper_btn a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
   }
 }
 /*  */
