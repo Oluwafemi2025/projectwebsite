@@ -52,7 +52,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 4rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 999;
   font-family: "Poppins", sans-serif;
@@ -94,7 +94,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-family: "Poppins", sans-serif;
-  padding: 1rem 2rem;
+  padding: 0;
 }
 nav .headerulist {
   padding: 0;
@@ -145,7 +145,7 @@ nav .headerulist li a {
 .headerulist li:hover .portal_dropdown {
   display: block;
 }
-.headerulist li :hover.portal_dropdown li a:hover {
+.headerulist li:hover .portal_dropdown li a:hover {
   transition: all 0.3s ease;
   text-decoration: none;
   background-color: var(--nav-bgcolor);
@@ -281,11 +281,20 @@ nav .headerulist li a {
 /* Flexbox Layout */
 .section2_wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background: transparent;
   /* color: #6b6b6b; */
   box-sizing: border-box;
+  border-radius: 0.2rem;
   max-width: 100%;
+  gap: 1rem;
+  align-items: stretch;
+  min-height: 500px;
+}
+.section2_wrapper_img,
+.section2_wrapper_text {
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 /* Image Container */
@@ -293,7 +302,6 @@ nav .headerulist li a {
   flex: 1 1 50%;
   padding: 0;
   margin: 0;
-  width: 50%;
   box-sizing: border-box;
   border-radius: 0.2rem;
 
@@ -304,22 +312,24 @@ nav .headerulist li a {
   height: 100%;
   object-fit: cover;
   display: block;
+
 }
 
 /* Text Container */
 .section2_wrapper_text {
   flex: 1 1 50%;
   background-color: transparent;
-  padding: 5rem 4rem 3rem 3rem;
+  padding:3rem;
   background-color: var(--primarybutton);
   color: var(--text-bg);
+  border-radius: 0.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   word-wrap: break-word;
   word-break: break-word;
   box-sizing: border-box;
-  background-image: url("img4.avif");
+  background-image: url(./image/img4.avif);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
