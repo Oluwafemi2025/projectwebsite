@@ -1110,10 +1110,25 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Mobile Menu Layout */
+
+/* Mobile Header/Menu Layout */
 @media (max-width: 768px) {
+
+  header {
+    padding: 0 1rem; /* FIX: removes overflow pushing content off position */
+    align-items: center;
+  }
+
+  nav {
+    padding: 0; /* FIX: prevents double spacing shift */
+  }
+
   .hamburger {
     display: flex;
+  }
+
+  h4 {
+    display: none;
   }
 
   .headerulist {
@@ -1129,9 +1144,7 @@ footer {
     transition: left 0.3s ease;
     padding-top: 2rem;
   }
- h4{
-  display:none;
-}
+
   .headerulist.active {
     left: 0;
   }
@@ -1163,5 +1176,4 @@ footer {
   .dropdown.active .portal_dropdown {
     display: block;
   }
-
 }
