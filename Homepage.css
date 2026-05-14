@@ -496,19 +496,21 @@ nav .headerulist li a {
 /* Mobile */
 @media (max-width: 768px) {
 
-  .section2 {
+ .section2 {
     padding: 3rem 1rem;
   }
 
+  /* STACK LAYOUT */
   .section2_wrapper {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
 
+  /* IMAGE */
   .section2_wrapper_img {
-    height: 300px;
-    border-radius: 10px;
+    height: 260px; /* equal size control */
+    border-radius: 0.2rem; /* MATCH desktop */
     overflow: hidden;
   }
 
