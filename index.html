@@ -256,24 +256,6 @@
 
     </div>
     <script>
-const section2Targets = document.querySelectorAll(
-            ".section2_wrapper_img, .section2_wrapper_text"
-        );
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    }
-                });
-            },
-            {
-                threshold: 0.25,
-            }
-        );
-
-        section2Targets.forEach((el) => observer.observe(el));
 
     </script>
 
