@@ -139,7 +139,7 @@ if (hamburger && headerulist) {
 
 
 }
-/ Section2 animation//
+// / Section2 animation//
 function initSection2Animation() {
   const section2Img = document.querySelector(".section2_wrapper_img");
   const section2Text = document.querySelector(".section2_wrapper_text");
