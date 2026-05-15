@@ -1319,59 +1319,79 @@ footer {
 }
    /* Section2 Animation styling starts */
 
-
 .section2_wrapper_img,
 .section2_wrapper_text {
   opacity: 0;
-  transition: all 0.9s ease;
   will-change: transform, opacity;
 }
 
-/* IMAGE: from left */
+/* IMAGE starts left */
 .section2_wrapper_img {
-  transform: translateX(-60px) scale(0.95);
+  transform: translateX(-60px);
 }
 
-/* TEXT: from right */
+/* TEXT starts right */
 .section2_wrapper_text {
-  transform: translateX(60px) scale(0.95);
+  transform: translateX(60px);
 }
 
-/* ACTIVE STATE (when scrolled into view) */
-.section2_wrapper_img.show {
-  opacity: 1;
-  transform: translateX(0) scale(1);
-}
+/* ===============================
+   ACTIVE STATE (ON SCROLL)
+   - NO KEYFRAME CONFLICT
+   - ONLY ONE SYSTEM: TRANSITION
+================================= */
 
+.section2_wrapper_img.show,
 .section2_wrapper_text.show {
   opacity: 1;
-  transform: translateX(0) scale(1);
+  transform: translateX(0);
 }
 
-/* TEXT INNER ANIMATION */
+/* smooth professional transition */
+.section2_wrapper_img,
+.section2_wrapper_text {
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.8s ease;
+}
+
+/* ===============================
+   INNER TEXT ANIMATION (MODERN FIX)
+================================= */
+
 .section2_wrapper_text h3,
 .section2_wrapper_text p,
 .section2_wrapper_text .section2_wrapper_btn {
   opacity: 0;
-  transform: translateY(15px);
-  transition: all 0.6s ease;
+  transform: translateY(12px);
 }
 
-/* stagger effect */
+/* staggered reveal */
 .section2_wrapper_text.show h3 {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.2s;
+  animation: textFadeUp 0.6s ease forwards;
+  animation-delay: 0.2s;
 }
 
 .section2_wrapper_text.show p {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.35s;
+  animation: textFadeUp 0.6s ease forwards;
+  animation-delay: 0.35s;
 }
 
 .section2_wrapper_text.show .section2_wrapper_btn {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.5s;
+  animation: textFadeUp 0.6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* ===============================
+   TEXT KEYFRAME (CLEAN)
+================================= */
+
+@keyframes textFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
