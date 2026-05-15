@@ -139,3 +139,38 @@ if (hamburger && headerulist) {
 
 
 }
+/ Section2 animation//
+function initSection2Animation() {
+  const section2Img = document.querySelector(".section2_wrapper_img");
+  const section2Text = document.querySelector(".section2_wrapper_text");
+
+  if (!section2Img || !section2Text) return;
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+
+          // OPTIONAL PROFESSIONAL UPGRADE:
+          // stop observing after animation (better performance)
+          observer.unobserve(entry.target);
+        } else {
+          // OPTIONAL (uncomment if you want re-animation on scroll back)
+          // entry.target.classList.remove("show");
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  observer.observe(section2Img);
+  observer.observe(section2Text);
+}
+
+/* run everything after DOM is ready (prevents conflicts) */
+document.addEventListener("DOMContentLoaded", () => {
+  initSection2Animation();
+});
