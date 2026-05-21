@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="/homepage/image/WhatsApp Image 2025-08-27 at 07.10.28_5a6b93e8.jpg">
+
+  <title>Apply to African Renanaisance University</title>
+  <link rel="stylesheet" href="/assets/css/styles2.css" />
+</head>
+
+<body class="page">
+  <header>
+
+  </header>
+  <main class="form-wrap">
+    <section class="card" aria-labelledby="title">
+      <header>
+        <h1 id="title">Student Registration Form <span class="badge">Fall Intake</span></h1>
+        <p>Apply to ARUY. Fields marked with <span class="req" aria-hidden="true">*</span>
+          are required.</p>
+      </header>
+
+      <form id="registrationForm" action="#" method="post" enctype="multipart/form-data" novalidate>
+        <div class="grid" role="group" aria-label="Personal information">
+          <div class="col-6">
+            <label for="first_name">First Name <span class="req" aria-hidden="true">*</span></label>
+            <input id="first_name" name="first_name" type="text" autocomplete="given-name" required
+              aria-describedby="first_name_error" />
+            <p id="first_name_error" class="error" role="alert"></p>
+          </div>
+          <div class="col-6">
+            <label for="last_name">Last Name <span class="req" aria-hidden="true">*</span></label>
+            <input id="last_name" name="last_name" type="text" autocomplete="family-name" required
+              aria-describedby="last_name_error" />
+            <p id="last_name_error" class="error" role="alert"></p>
+          </div>
+
+          <div class="col-6">
+            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required
+              aria-describedby="email_error" />
+            <p id="email_error" class="error" role="alert"></p>
+          </div>
+
+          <div class="col-6">
+            <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+234 801 234 5678"
+              pattern="^\+?[0-9\s\-()]{8,20}$" required aria-describedby="phone_error" />
+            <p id="phone_error" class="error" role="alert"></p>
+          </div>
+
+          <div class="col-4">
+            <label for="dob">Date of Birth <span class="req" aria-hidden="true">*</span></label>
+            <input id="dob" name="dob" type="date" required aria-describedby="dob_error" />
+            <p id="dob_error" class="error" role="alert"></p>
+            <p class="hint">Applicants must be at least 16 years old.</p>
+          </div>
+
+          <div class="col-8">
+            <fieldset>
+              <legend>Gender (optional)</legend>
+              <div class="radio-row" role="radiogroup" aria-label="Gender">
+                <label><input type="radio" name="gender" value="female">Female</label>
+                <label><input type="radio" name="gender" value="male">Male</label>
+                <label><input type="radio" name="gender" value="nonbinary">Non-binary</label>
+                <label><input type="radio" name="gender" value="na">Prefer not to say</label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="divider" role="presentation"></div>
+
+        <div class="grid" role="group" aria-label="Address">
+          <div class="col-12">
+            <label for="address">Street Address <span class="req" aria-hidden="true">*</span></label>
+            <input id="address" name="address" type="text" autocomplete="address-line1" required
+              aria-describedby="address_error" />
+            <p id="address_error" class="error" role="alert"></p>
+          </div>
+          <div class="col-4">
+            <label for="city">City <span class="req" aria-hidden="true">*</span></label>
+            <input id="city" name="city" type="text" autocomplete="address-level2" required
+              aria-describedby="city_error" />
+            <p id="city_error" class="error" role="alert"></p>
+          </div>
+          <div class="col-4">
+            <label for="state">State/Province <span class="req" aria-hidden="true">*</span></label>
+            <input id="state" name="state" type="text" autocomplete="address-level1" required
+              aria-describedby="state_error" />
+            <p id="state_error" class="error" role="alert"></p>
+          </div>
+          <div class="col-4">
+            <label for="country">Country <span class="req" aria-hidden="true">*</span></label>
+            <select id="country" name="country" required aria-describedby="country_error">
+              <option value="" selected disabled>Choose a country…</option>
+              <option>Nigeria</option>
+              <option>Ghana</option>
+              <option>Kenya</option>
+              <option>South Africa</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>Other</option>
+            </select>
+            <p id="country_error" class="error" role="alert"></p>
+          </div>
+        </div>
+
+        <div class="divider" role="presentation"></div>
+
+        <div class="grid" role="group" aria-label="Academic details">
+          <div class="col-6">
+            <label for="faculty">Faculty <span class="req" aria-hidden="true">*</span></label>
+            <select id="faculty" name="faculty" required aria-describedby="faculty_error">
+              <option value="" selected disabled>Select faculty…</option>
+              <option value="science">Science & Technology</option>
+              <option value="business">Business & Management</option>
+              <option value="arts">Arts & Humanities</option>
+              <option value="health">Health Sciences</option>
+            </select>
+            <p id="faculty_error" class="error" role="alert"></p>
+          </div>
+          <div class="col-6">
+            <label for="program">Program <span class="req" aria-hidden="true">*</span></label>
+            <select id="program" name="program" required aria-describedby="program_error">
+              <option value="" selected disabled>Select program…</option>
+              <!-- Example options; replace with real ones -->
+              <option data-faculty="science">B.Sc. Computer Science</option>
+              <option data-faculty="science">B.Eng. Electrical Engineering</option>
+              <option data-faculty="business">B.Sc. Accounting</option>
+              <option data-faculty="business">B.Sc. Marketing</option>
+              <option data-faculty="arts">B.A. English</option>
+              <option data-faculty="health">B.Sc. Nursing</option>
+            </select>
+            <p id="program_error" class="error" role="alert"></p>
+          </div>
+
+          <div class="col-4">
+            <label for="level">Entry Level <span class="req" aria-hidden="true">*</span></label>
+            <select id="level" name="level" required aria-describedby="level_error">
+              <option value="" selected disabled>Choose level…</option>
+              <option>Undergraduate (100L)</option>
+              <option>Direct Entry</option>
+              <option>Transfer</option>
+              <option>Postgraduate</option>
+            </select>
+            <p id="level_error" class="error" role="alert"></p>
+          </div>
+
+          <div class="col-4">
+            <label for="term">Intended Term <span class="req" aria-hidden="true">*</span></label>
+            <select id="term" name="term" required aria-describedby="term_error">
+              <option value="" selected disabled>Select term…</option>
+              <option>Fall 2025</option>
+              <option>Spring 2026</option>
+              <option>Summer 2026</option>
+            </select>
+            <p id="term_error" class="error" role="alert"></p>
+          </div>
+
+          <div class="col-4">
+            <label for="gpa">Last GPA (optional)</label>
+            <input id="gpa" name="gpa" type="number" step="0.01" min="0" max="5" placeholder="e.g., 4.20"
+              aria-describedby="gpa_hint" />
+            <p id="gpa_hint" class="hint">Scale 0.00–5.00</p>
+          </div>
+
+          <div class="col-12">
+            <label for="prev_school">Previous School (optional)</label>
+            <input id="prev_school" name="prev_school" type="text" />
+          </div>
+        </div>
+
+        <div class="divider" role="presentation"></div>
+
+        <div class="grid" role="group" aria-label="Account & uploads">
+          <div class="col-6">
+            <label for="password">Create Password <span class="req" aria-hidden="true">*</span></label>
+            <input id="password" name="password" type="password" minlength="8" required
+              aria-describedby="password_error password_hint" />
+            <p id="password_hint" class="hint">At least 8 characters.</p>
+            <p id="password_error" class="error" role="alert"></p>
+          </div>
+          <div class="col-6">
+            <label for="confirm_password">Confirm Password <span class="req" aria-hidden="true">*</span></label>
+            <input id="confirm_password" name="confirm_password" type="password" minlength="8" required
+              aria-describedby="confirm_password_error" />
+            <p id="confirm_password_error" class="error" role="alert"></p>
+            <p class="ok" id="password_ok" aria-live="polite"></p>
+          </div>
+
+          <div class="col-6">
+            <label for="photo">Passport Photo (JPG/PNG, max 2MB)</label>
+            <input id="photo" name="photo" type="file" accept="image/png,image/jpeg" aria-describedby="photo_error" />
+            <p id="photo_error" class="error" role="alert"></p>
+          </div>
+          <div class="col-6">
+            <label for="transcript">Transcript (PDF, max 5MB)</label>
+            <input id="transcript" name="transcript" type="file" accept="application/pdf"
+              aria-describedby="transcript_error" />
+            <p id="transcript_error" class="error" role="alert"></p>
+          </div>
+        </div>
+
+        <div class="divider" role="presentation"></div>
+
+        <div class="grid" role="group" aria-label="Agreement">
+          <div class="col-12 inline">
+            <input id="agree" name="agree" type="checkbox" required aria-describedby="agree_error" />
+            <label for="agree">I certify that the information provided is accurate and I agree to the <a href="#"
+                target="_blank" rel="noopener">Admissions Policy</a>. <span class="req"
+                aria-hidden="true">*</span></label>
+          </div>
+          <div class="col-12">
+            <p id="agree_error" class="error" role="alert"></p>
+            <p class="required-hint">We will use your details to process your application and communicate with you about
+              your admission.</p>
+          </div>
+        </div>
+
+        <div class="divider" role="presentation"></div>
+
+        <div class="actions">
+          <button class="btn" type="submit" aria-label="Submit registration">Submit Application</button>
+          <button class="btn secondary" type="reset">Clear Form</button>
+          <p class="hint" id="form_status" role="status" aria-live="polite" style="margin:0;"></p>
+        </div>
+      </form>
+
+      <p class="note" style="margin-top:18px">
+        Tip: Replace the example programs, terms, and the form <code>action</code> with your real offerings and backend
+        endpoint. <a href="/assets/index.html">Back to home</a>
+      </p>
+    </section>
+  </main>
+
+
+  <script src="/assets/js/script2.js"></script>
+</body>
+
+</html>
