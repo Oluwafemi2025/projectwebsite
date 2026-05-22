@@ -1,0 +1,415 @@
+/* ===============================
+   ROOT COLORS
+================================= */
+
+:root{
+  --ink:#111;
+  --muted:#6b7280;
+  --brand:#2563eb;
+  --bg:white;
+  --card:#ffffff;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --radius:16px;
+
+  --transition:all .35s ease;
+}
+
+/* ===============================
+   GLOBAL RESET
+================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body.page{
+  font-family:"Poppins", sans-serif;
+  background:linear-gradient(to bottom, #f8fafc, #ffffff);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* ===============================
+   SECTION SPACING
+================================= */
+
+.page .section{
+  padding-top:40px;
+}
+
+/* ===============================
+   MAIN CONTAINER
+================================= */
+
+.container-section{
+  width:min(92%, 1200px);
+  margin:80px auto;
+  background:var(--bg);
+
+  border-radius:20px;
+  padding:48px 36px;
+
+  box-shadow:0 12px 30px rgba(16,24,40,.08);
+  border:1px solid #eef0f4;
+
+  position:relative;
+  overflow:hidden;
+}
+
+/* subtle top accent */
+.container-section::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:5px;
+  background:linear-gradient(
+    to right,
+    var(--brand),
+    #60a5fa
+  );
+}
+
+/* ===============================
+   PAGE TITLE
+================================= */
+
+.container-section h1{
+  text-align:center;
+  font-size:clamp(2rem, 5vw, 3.7rem);
+  font-weight:700;
+  color:var(--ink);
+
+  margin-bottom:3rem;
+  letter-spacing:-1.5px;
+
+  position:relative;
+}
+
+.container-section h1::after{
+  content:"";
+  width:90px;
+  height:5px;
+  background:var(--brand);
+
+  display:block;
+  margin:16px auto 0;
+  border-radius:999px;
+}
+
+/* ===============================
+   NEWS GRID
+================================= */
+
+.news-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:2rem;
+}
+
+/* ===============================
+   NEWS CARD
+================================= */
+
+.news-item{
+  background:var(--card);
+  border-radius:18px;
+
+  padding:2rem;
+
+  box-shadow:var(--shadow);
+  border:1px solid rgba(0,0,0,.04);
+
+  transition:var(--transition);
+
+  position:relative;
+  overflow:hidden;
+}
+
+/* top hover line */
+.news-item::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:4px;
+
+  background:var(--brand);
+
+  transform:scaleX(0);
+  transform-origin:left;
+
+  transition:transform .4s ease;
+}
+
+.news-item:hover::before{
+  transform:scaleX(1);
+}
+
+.news-item:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+/* ===============================
+   CARD TEXT
+================================= */
+
+.news-item h3{
+  font-size:1.3rem;
+  font-weight:600;
+  margin-bottom:.7rem;
+  color:var(--ink);
+  line-height:1.4;
+}
+
+.news-item .muted{
+  color:var(--muted);
+  font-size:.92rem;
+  margin-bottom:1rem;
+  font-weight:500;
+}
+
+.news-item p{
+  color:#374151;
+  font-size:.98rem;
+}
+
+/* ===============================
+   DOWNLOADS
+================================= */
+
+.downloads{
+  list-style:none;
+  padding:0;
+  margin:0;
+
+  display:grid;
+  gap:12px;
+}
+
+.downloads a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:14px 16px;
+
+  border:1px dashed #d1d5db;
+  border-radius:14px;
+
+  text-decoration:none;
+  color:var(--ink);
+
+  background:#fff;
+
+  transition:var(--transition);
+}
+
+.downloads a:hover{
+  background:#f8fafc;
+  border-color:var(--brand);
+  transform:translateX(4px);
+}
+
+/* ===============================
+   NEWS2 IMAGE SECTION
+================================= */
+
+.news2{
+  display:grid;
+  grid-template-columns:repeat(1,1fr);
+  align-items:center;
+  gap:1.5rem;
+}
+
+.news2 a{
+  overflow:hidden;
+  border-radius:18px;
+
+  box-shadow:var(--shadow);
+
+  transition:transform .35s ease,
+             box-shadow .35s ease;
+
+  position:relative;
+}
+
+/* image overlay */
+.news2 a::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.18),
+    transparent
+  );
+
+  opacity:0;
+  transition:.35s ease;
+}
+
+.news2 a:hover::after{
+  opacity:1;
+}
+
+.news2 a:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.news2 img{
+  width:100%;
+  max-width:100%;
+  height:320px;
+
+  object-fit:cover;
+  aspect-ratio:4/2;
+
+  display:block;
+
+  transition:transform .45s ease;
+}
+
+.news2 a:hover img{
+  transform:scale(1.06);
+}
+
+/* ===============================
+   LINKS
+================================= */
+
+.news-item a,
+h4 a{
+  color:var(--brand);
+  text-decoration:none;
+  font-weight:600;
+
+  transition:var(--transition);
+}
+
+.news-item a:hover,
+h4 a:hover{
+  opacity:.85;
+}
+
+/* ===============================
+   BACK BUTTON
+================================= */
+
+.news-list h4{
+  grid-column:1 / -1;
+  text-align:center;
+  margin-top:1rem;
+}
+
+.news-list h4 a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:14px 30px;
+
+  border-radius:999px;
+
+  background:var(--brand);
+  color:white;
+
+  box-shadow:var(--shadow);
+
+  transition:var(--transition);
+}
+
+.news-list h4 a:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 35px rgba(37,99,235,.22);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+.footer{
+  margin-top:4rem;
+  background:#0f172a;
+
+  padding:2rem 1rem;
+  text-align:center;
+}
+
+.footer p{
+  color:#e5e7eb;
+  font-size:.95rem;
+}
+
+/* ===============================
+   REVEAL ANIMATION
+================================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeReveal .9s ease forwards;
+}
+
+@keyframes fadeReveal{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ===============================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width:768px){
+
+  .container-section{
+    width:94%;
+    padding:36px 20px;
+    border-radius:16px;
+  }
+
+  .news-list{
+    gap:1.3rem;
+  }
+
+  .news-item{
+    padding:1.5rem;
+    border-radius:16px;
+  }
+
+  .news-item h3{
+    font-size:1.12rem;
+  }
+
+  .news-item p{
+    font-size:.95rem;
+  }
+
+  .news2 img{
+    height:240px;
+  }
+
+  .downloads a{
+    padding:12px 14px;
+  }
+
+  .news-list h4 a{
+    width:100%;
+    max-width:250px;
+  }
+}
