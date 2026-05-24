@@ -1,0 +1,158 @@
+body {
+  font-family: Helvetica;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.top_img {
+  width: 94%;
+}
+
+.announcement p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.announcement a {
+  color: #d10000;
+  text-decoration: none;
+}
+
+.comment-section {
+  margin-top: 40px;
+}
+
+.comment-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.required {
+  color: red;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.comment-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.checkbox {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox input {
+  /* margin-right: 8px; */
+  margin-top: 0.65em;
+  width: 3%;
+}
+
+.comment-form button {
+  margin-top: 20px;
+  background-color: #da2627;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #a80000;
+}
+
+.previous-post {
+  margin-top: 40px;
+}
+
+.previous-post h3 {
+  font-size: 20px;
+}
+
+
+@media screen and (min-width:601px) and (max-width:1204px) {
+  .container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .top_img {
+    width: 100%;
+  }
+
+  .announcement p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .comment-section h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .comment-form label {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .comment-form input,
+  .comment-form textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .comment-form textarea {
+    height: 100px;
+  }
+
+  .checkbox {
+    margin-top: 10px;
+  }
+
+  .checkbox input {
+    margin-top: 0.5em;
+    width: 5%;
+  }
+
+  .comment-form button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .previous-post h3 {
+    font-size: 18px;
+  }
+}
